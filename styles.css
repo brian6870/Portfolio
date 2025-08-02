@@ -1,0 +1,717 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
+
+/* this is the syling for the body */
+body {
+    height: 100dvh;
+    background-color: #EBEBEB;
+    color:black;
+    padding: 45PX 4%;
+   
+
+}
+
+/* this is the styling for the main container */
+.container{
+    position: relative;
+    height: 93dvh;
+    background:transparent;
+    border-radius: 30PX;
+    border: 3px solid white;
+    backdrop-filter: blur(20px);
+    box-shadow: 3px 3px 3px #1E1E1E;
+    transform: scale(0);
+    animation: zoom-in 1s ease forwards;
+
+}
+
+@keyframes zoom-in {
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* this is the styling for the header */
+header {
+    margin: auto;
+    position: relative;
+    width: 98%;
+    top: 20px;
+    padding: 20px 5%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    border-radius: 30px 30px 30px 30px;
+    border: 2px solid white;
+    backdrop-filter: blur(20px);
+    box-shadow: 3px 3px 3px #1E1E1E;
+}
+
+.animated { 
+    transform: translateY(30PX);
+    opacity: 0;
+    animation: slide-in 1s ease forwards;
+    animation-delay: 1s;
+}
+
+@keyframes slide-in {
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.logo {
+    color: #1E1E1E;
+    font-size: 25px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.nav-bar label {
+    color:#1E1E1E ;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 5px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+.nav-bar label:hover {
+    border-bottom: 2px solid#1E1E1E ;
+}
+
+/* Responsive design for  the header for smaller screens */
+@media (max-width: 663px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 2%;
+        border-radius: 20px;
+    }
+    .logo {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .nav-bar label,
+    .nav-bar a {
+        font-size: 13px;
+        margin-left: 0;
+        margin-right: 10px;
+        display: inline-block;
+    }
+}
+
+/* this is the styling for the slider */
+#slider{
+    margin:auto;
+    max-width: 98%;
+
+
+}
+
+#slider input[type="radio"] {
+    display: none;
+}
+
+#slider label {
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+/* this is the styling for the slides */
+#slides {
+margin-top: 40px;
+height: 69dvh;
+padding: 30px;
+border: 2px solid white;
+border-radius: 30px 30px 30px 30px;
+background: transparent;
+position: relative;
+z-index: 1;
+backdrop-filter: blur(20px);
+box-shadow: 3px 3px 3px #1E1E1E;
+animation-delay: 1.5s;
+}
+
+
+
+#overflow {
+    width: 100%;
+    overflow:hidden;
+}
+ 
+#slide1:checked ~ #slides .inner {
+    margin-left:0 ;
+    
+}
+#slide2:checked ~ #slides .inner {
+    margin-left: -100%;
+}
+#slide3:checked ~ #slides .inner {
+    margin-left: -200%;
+}
+
+#slide4:checked ~  #slides .inner {
+    margin-left: -300%;
+}
+#slide5:checked ~ #slides .inner {
+    margin-left: -400%;
+
+}
+
+/* this is the styling for the inner container which is the slide wrapper of the slides */
+.inner {
+    display: flex;
+    transition: margin-left 800ms cubic-bezier(0.770,0.000,0.175,1.000);
+    width: 500%;
+    line-height: 1;
+    height: 67dvh;
+
+}
+
+.slide {
+    margin: 0 10px 0 10px;
+    width: 25%;
+    float:left;
+    display: block;
+}
+
+/* Responsive design for the slide container for smaller screens */
+@media(max-width:630px) {
+    .slide{
+        width: 80vw;
+    }
+    
+}
+
+/* this is the styling for the  slides_1 which contains the about section */
+
+.slide_1{
+    
+    border-radius: 30px 30px 30px 30px ;
+    background: transparent;
+      
+}
+
+
+.slide_1 .about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    color: #1E1E1E;
+    padding: 50px 5% ;
+    height: 60dvh;
+
+} 
+
+/* Responsive design for slide_1 for smaller screens */
+@media (max-width:650px) {
+    .slide_1 .about{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+        
+    }
+    
+     .about .details {
+      margin-top: -100px;
+}
+     .about .details h1 {
+    font-size: 1.2rem;
+}
+     .about .details h2 {
+      font-size: 0.8rem;
+  
+}
+        .about .details p {
+        font-size: 0.4rem;
+        line-height: 1;
+        margin: 10px 0;
+    }
+        
+}
+    
+
+
+.about .details h1{ 
+    font-size: 2.2rem;
+
+
+}
+
+.about .details h2 {
+    font-size: 1.2rem;
+
+}
+
+.about .details p {
+    margin:10px 0  ;
+    font-size: 1.1rem;
+    line-height: 1;
+}
+.home-img{
+    margin-top: 10px;
+}
+
+.home-img .img-box {
+    position: relative;
+    width: 20vw;
+    height: 20vw;
+    border: 3px solid white;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 3px 3px 3px #1E1E1E;
+}
+
+/* Responsive design for the image in slide_1 for smaller screens */
+@media (max-width:650px) {
+    .home-img .img-box {
+        width: 40vw;
+        height: 40vw;
+    }
+    
+}
+
+.home-img .img-box img {
+    position: absolute;
+    top: 30px;
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    
+}
+
+/* this is the styling for the slide_2 which contains the education section */
+
+.slide_2 {
+    border-radius: 30px 30px 30px 30px ;
+    background:transparent;
+    height: 60dvh;
+
+}
+
+.Education {
+    align-items: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    padding:  30px 20px;
+    color: #1E1E1E;
+    height: 60dvh;
+}
+
+.Education h1 {
+    font-size: 2.2rem;
+    color: #1E1E1E;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-align: center;
+
+}
+
+.Education h2 {
+    font-size: 1rem;
+    margin-top:10px ;
+
+}
+
+.Education p {
+    font-size: 0.9rem;
+    
+
+}
+
+.Schools ol li {
+    font-weight: 20px;
+   
+}
+
+.donload-cv {
+    margin-top: 40px;
+   display: flex;
+   align-items: center;
+   padding: 15px 30px;
+   font-size: 16px;
+   color: black;
+   gap: 10px;
+   border: #1E1E1E;
+   border-radius: 50px;
+   cursor: pointer;
+   box-shadow: 3px 3px 3px #1E1E1E;
+   
+
+}
+.btn{
+    text-decoration: none;
+    color: #1E1E1E;
+}
+.donload-cv:hover {
+    background: transparent;
+    box-shadow: 0 0 10px #fff;
+    color: #333;
+}
+
+/* Responsive design for  slide_2 smaller screens */
+@media(max-width:630px) {
+    .slide_2{
+        width:80vw;
+       
+    }
+    
+}
+
+/* this is the styling for the slide_3 which contains the interests section */
+
+.slide_3 {
+    border-radius: 30px 30px 30px 30px ;
+    background: transparent;
+    height: 60dvh;
+    margin: auto 10x;
+
+}
+
+/* Responsive design for slide_3 for smaller screens */
+@media(max-width:630px) {
+    .slide_3{
+        width:80vw;
+       
+    }
+    
+}
+
+.Interests {
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    margin: 15px auto;
+    max-width: 500px;
+    height: 60dvh;
+
+}
+
+.Interests h1 {
+    font-size:2.2rem;
+    color: #1E1E1E;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.Interests p {
+    color: #1E1E1E;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+
+/* this is the styling for the Projects section in slide_4 */
+
+.slide_4 {
+    border-radius: 30px 30px 30px 30px ;
+    background: transparent;
+    height: 60dvh;
+    margin: auto;
+
+}
+
+/* Responsive design for slide_4 for smaller screens */
+
+@media(max-width:630px) {
+    .slide_4{
+        width:80vw;
+       
+    }
+    
+}
+
+
+.slide_4 h1 {
+    font-weight: 600;
+    color: #1E1E1E;
+    font-size: 2.2rem;
+    text-align: center;
+    margin: 5px auto;
+    
+}
+
+.slide_4 p {
+font-size: 1rem;
+color: #1E1E1E;
+text-align: center;
+margin: 0 10px;
+}
+
+.Projects{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 80vw;
+    
+}
+
+
+/* Responsive design for the projects container smaller screens */
+@media(max-width:630px) {
+    .Projects{
+        width:75vw;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+
+
+.Projects figure {
+    margin:10px auto;
+    width: 25%;
+    text-align:left;
+    color: #1E1E1E;
+    text-align: center;
+    
+
+}
+
+.Projects figcaption{
+    margin-top: 5px;
+    font-size: 1rem;
+    color: #1E1E1E;
+}
+
+    
+
+/* Responsive design for figures and sectionfigures smaller screens */
+
+@media(max-width:953px) {
+    .Projects figure {
+        width: 60vw;
+        text-align:left;
+        height: 20dvh;
+    }
+
+
+    .sectionfigure1{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: left;
+        width: 55vw;
+    
+    }
+    
+
+    .sectionfigure1 figcaption {
+        margin-top: 10px;
+        margin-left: 10px;
+        font-size: 0.9rem;
+        font-weight: normal;
+    }
+    
+    .sectionfigure2{
+        
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: left;
+        width:55vw;
+        
+        
+    }
+    .sectionfigure2 figcaption {
+        margin-top: 10px;
+        margin-left: 10px;
+        font-size: 0.9rem;
+        font-weight: normal;
+    }
+ 
+}
+
+.Projects figure img{
+    border: 2px solide white;
+    border-radius: 30px 30px 30px 30px;
+    width: 20vw;
+    height: 30dvh;
+    box-shadow: 3px 3px 3px #1E1E1E;
+}
+
+/* Responsive design for the images in slide_4  smaller screens */
+
+@media(max-width:953px) {
+    .Projects figure img{
+        width: 85%;
+        height: 14dvh;
+    }
+    
+}
+
+/* this is the styling for the Contacts section in slide_5 */
+
+.slide_5 {
+    height: 60dvh;
+    border-radius: 30px 30px 30px 30px ;
+    background: transparent;
+    backdrop-filter: blur(20px);
+}
+
+/* Responsive design for slide_5 for  smaller screens */
+@media(max-width:630px) {
+    .slide_5{
+        width:80vw;
+    }
+    
+}
+
+
+.Contacts {
+    
+    align-items: center;
+    height:60dvh;
+    gap: 50px;
+    padding: 50px 5% 0;
+    border:2px solid #1E1E1E;
+       
+}
+
+/* Responsive design for contacts container for smaller screens */
+@media(max-width:630px) {
+    .contacts{
+        width:75vw;
+    }
+    
+}
+
+
+.contact-form{
+    margin: 60px auto;
+    width: 500px;
+    height: 410px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; 
+    
+}
+    
+
+/* Responsive design for the contact form smaller screens */
+@media(max-width:630px) {
+    .contact-form{
+        width:70vw;
+        
+    }
+    
+}
+
+.contact-form-title h2{
+    font-weight: 600;
+    color: #1E1E1E;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.contact-form-title hr {
+    border: none;
+    width: 200px;
+    height: 5px;
+    background-color: #1E1E1E;
+    border-radius: 20px;
+    margin-bottom: 20px;
+
+}
+
+.contact-inputs{
+    width:400px;
+    height: 50px;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: black;
+    border-radius: 50px;
+    
+}
+
+.contact-inputs:hover {
+    background: transparent;
+    box-shadow: 0 0 10px #fff;
+    color: #333;
+}
+
+/* Responsive design for the contact inputs section on the contacts form smaller screens */
+@media(max-width:630px) {
+    .contact-inputs{
+        width:50vw;
+    }
+    
+}
+
+.contact-form textarea{
+    height: 100px;
+    padding: 15px;
+    border-radius: 20px;
+
+}
+
+.contact-form button {
+   display: flex;
+   align-items: center;
+   padding: 15px 30px;
+   font-size: 16px;
+   color: black;
+   gap: 10px;
+   border: #1E1E1E;
+   border-radius: 50px;
+   cursor: pointer;
+   box-shadow: 3px 3px 3px #1E1E1E;
+
+}
+
+.contact-form button:hover {
+    background: transparent;
+    box-shadow: 0 0 10px #fff;
+    color: #333;
+}
+
+
+
+/* this is the styling for the bullets which are used to navigate through the slides */
+
+#bullets {
+    margin:20px auto;
+    text-align: center;
+}
+
+#bullets label {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    background: #1E1E1E;
+    margin:0 8px;
+    cursor: pointer;
+    transition:  .5s;
+}
+
+#bullets label:hover{
+    background: #fff;
+    box-shadow: 0 0 10px #fff;
+    color: #fff;
+    opacity: 1;
+
+}
+

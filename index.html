@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+   
+</head>
+<body>
+    
+    <!--This is the header section of my portfolio it contains the navigation buttons -->
+<section class="container">
+           
+    <header class="animated">
+        <a href="#logo" class="logo">My Porfolio</a>
+        <nav class="nav-bar">
+            
+                <label for="slide1">About Me</label>
+                <label for="slide2">Education</label>
+                <label for="slide3">Intrests</label>
+                <label for="slide4">Projects</label>
+                <label for="slide5">contacts</label>
+            
+        </nav>
+    </header>
+
+<!--This is the slider  section of my portfolio  -->
+
+    <div id="slider">
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+        <input type="radio" name="slider" id="slide4">
+        <input type="radio" name="slider" id="slide5">
+
+        <div id="slides" class="home animated">
+            <div id="overflow">
+                <div class="inner">
+
+<!--This is the about section -->
+
+                    <div class="slide slide_1">
+                        <div class="about">
+                        <div class="details">
+                        <h1>About Me</h1>
+                        <h2>Brian Munene Gitau</h2>
+                        <p>Hi,l am an aspiring Chemistry QA and web developer, fluent in Python and JavaScript. I am also familiar with CSS and HTML, and I love creating dynamic and responsive websites. I enjoy learning new technologies and continuously improving my skills to deliver high-quality solutions.</p>
+                        </div>
+
+                        <div class="home-img">
+                        <figure class="img-box">
+                            <img src="pic.png" alt="My Picture">
+                        </figure>
+                        </div>
+                        </div>
+
+
+                    </div>
+
+<!--This is the Education section -->
+                    <div class="slide slide_2">
+                        <div class="Education">
+                        <h1>Education</h1>
+                        
+
+                         <div class="Schools">
+                        <ol>
+                        <li><h2>Bachelor of Science Industrial Chemistry</h2></li>
+                        <p>University of Nairobi</p>
+                        <p>2022 - Current</p>
+
+                        <li><h2>Software development Certificate</h2></li>
+                        <p>PLP Academy</p>
+                        <p>June 2025 - Current</p>
+                        
+                        <li><h2>Kenya Certificate of Secondary Education</h2></li>
+                        <p>Ikuu Boys' High School</p>
+                        <p>2018 - 2021</p>
+
+                        <li><h2>Kenya Certificate of Primary Education</h2></li>
+                        <p>Bishop Lawi Imathiu </p>
+                        <p>2007 - 2017</p>
+                         </ol>
+                        </div>
+                            <div class="donload-cv">
+                                <a href="CV.pdf" download="CV.pdf" class="btn">Download CV</a>
+                            </div>
+                        </div>  
+                    </div>
+
+<!--This is the interests section -->
+                    <div class="slide slide_3">
+                        <div class="Interests">
+                        <h1>Interests</h1>
+                        
+                        <p>I am deeply passionate about AI development, robotics, and gaming. I enjoy exploring how artificial intelligence can solve real-world problems and enhance user experiences. My interest in robotics drives me to learn about automation and intelligent systems, while gaming inspires my creativity and problem-solving skills. I am always eager to work on innovative projects that combine these fields and push the boundaries of technology.</p>
+                    
+                        </div>
+                    </div>
+
+<!--This is the projects  section -->
+                    <div class="slide slide_4">
+                        <h1>Projects</h1><p>
+                        <p>l am currently working on two projects:</p>
+                        <div class="Projects">
+                        <figure>
+                            <h2>1.Patricia's inc.</h2>
+                            <hr>
+                            <div class="sectionfigure1"> <!--This container was created to enable the the items to be arranged in a culumn and make the section responsive to smaller screens -->
+                        <img src="project1.png" alt="Web application dashboard displaying user statistics and charts in a modern interface, with a sidebar menu on the left and a welcoming color scheme that conveys a professional and inviting atmosphere. Main heading reads Project 1 Dashboard." style="max-width:400px;max-height:200px;">
+                        <figcaption>This is a website that uses an AI Agent to generate leads for B2B sales according to the client ICP</figcaption>
+                            </div>
+                        </figure>
+                         <figure>
+                            <h2>2.ChemPro</h2> 
+                            <hr>
+                        <div class="sectionfigure2"><!--This container was created to enable the the items to be arranged in a culumn and make the section responsive to smaller screens -->
+                        <img src="project2.png" alt="Web application dashboard displaying user statistics and charts in a modern interface, with a sidebar menu on the left and a welcoming color scheme that conveys a professional and inviting atmosphere. Main heading reads Project 1 Dashboard." style="max-width:400px;max-height:200px;">
+                        <figcaption>it's website that contains revision resources for students pursuing a degree in chemistry </figcaption>
+                        </div>
+                        </figure>
+                        </div>
+                    </div>
+
+<!--This is the contacts  section -->
+
+                    <div class="slide slide_5">
+                        <div class="Contact">
+                          
+                             <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                                    <div class="contact-form-title">
+                                        <h2>get in touch</h2>
+                                        <hr>
+                                    </div>
+                                     <input type="hidden" name="access_key" value="9e4284bc-1190-4fcb-b92d-637fd538ea46">
+                                    <input type="text" name="name" placeholder="your name" class="contact-inputs" required>
+                                    <input type="text" name="email" placeholder="your email" class="contact-inputs" required>
+                                    <textarea name="message" placeholder="Your Mesage" class="contact-inputs" required></textarea>
+                                    <button type="submit">submit </button>     
+                             </form>
+                           
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>    
+        </div>
+    </div>
+
+    <!--This is the bullets section that contains the bullets that indicate the current slide -->
+    <!--The bullets are used to navigate through the slides -->
+                           
+                    <div id="bullets">
+                        <label for="slide1" class="active"></label>
+                        <label for="slide2"></label>
+                        <label for="slide3"></label>
+                        <label for="slide4"></label>
+                        <label for="slide5"></label>
+                    </div>
+
+
+    
+</section>
+</body>
+</html>
