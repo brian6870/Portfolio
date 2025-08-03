@@ -2,7 +2,10 @@
 
 Welcome to **My Portfolio**!  
 This is a personal website project showcasing my background, skills, interests, and projects in a modern, responsive design.
-visit the following links to access it https://briangitausportfolio.netlify.app/  and  https://github.com/brian6870/Portfolio
+visit the following links to access it 
+1.https://brian6870.github.io/Portfolio/
+2.https://briangitausportfolio.netlify.app/
+you can also download the apk version  (app-debug.apk file) for  android users (WARNING!! it contains AD) to block the ads use a private dns like dns.adguard.com 
 
 ## Features
 
