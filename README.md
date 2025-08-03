@@ -2,6 +2,7 @@
 
 Welcome to **My Portfolio**!  
 This is a personal website project showcasing my background, skills, interests, and projects in a modern, responsive design.
+acess my it via the following links https://briangitausportfolio.netlify.app/  and  https://github.com/brian6870/Portfolio
 
 ## Features
 
